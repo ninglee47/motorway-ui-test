@@ -24,7 +24,7 @@ function ClientForm() {
       if (!value) {
         error = 'Name is required'
       } else if (!regName.test(value)) {
-        error = "Jeez! You're not a fan 😱"
+        error = "Invalid format"
       }
       return error
     }
