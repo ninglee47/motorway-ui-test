@@ -41,6 +41,11 @@ export default function ImageModal({ isOpen, onClose, img }) {
                   </Box>
               </HStack>
               <Image src={`${img.url}.jpg`} pb='10px'/>
+              <picture>
+                <source srcSet={`${img.url}.webp`} type='image/webp'></source>
+                <source srcSet={`${img.url}.jpg`} type='image/jpg'></source>
+                <img src={`${img.url}.jpg`} alt="photo"></img>
+              </picture>
               <Text fontWeight={'bold'} fontSize={'2xl'}>{img.user.name}</Text>
               <Text>{img.description}</Text>
         

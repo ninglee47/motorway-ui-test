@@ -65,7 +65,8 @@ export default function FetchFullSize() {
     const { isOpen: isImageModalOpen, onOpen: onImageModalOpen, onClose: onImageModalClose } = useDisclosure()
     
     useEffect(() => {
-      fetch('images?limit=10')
+      //fetch('images?limit=10')
+      fetch('images')
         .then(res => res.json())
         .then(data => {
           console.log('Success:', data);

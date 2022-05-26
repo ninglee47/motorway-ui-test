@@ -25,8 +25,6 @@ app.get('/imageThumbnails', ({ query }, res) => {
   }, randomInterval(500, 1500));
 });
 
-
-
 app.listen(5500, () => {
   process.stdout.write('Server is available on http://localhost:5500/\n');
 });

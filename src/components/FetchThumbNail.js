@@ -65,7 +65,6 @@ export default function FetchThumbNail() {
     const [selectedCarImage, setSelectedCarImage] = useState();
     const { isOpen: isImageModalOpen, onOpen: onImageModalOpen, onClose: onImageModalClose } = useDisclosure()
     
-
     const renderCallback = (
         id, // the "id" prop of the Profiler tree that has just committed
         phase, // either "mount" (if the tree just mounted) or "update" (if it re-rendered)
@@ -78,6 +77,7 @@ export default function FetchThumbNail() {
   
     useEffect(() => {
       fetch('imageThumbnails?limit=10')
+      //fetch('imageThumbnails')
         .then(res => res.json())
         .then(data => {
           console.log('Success:', data);

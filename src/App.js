@@ -1,9 +1,10 @@
 import React from 'react';
-import { ChakraProvider, Text, Box } from '@chakra-ui/react'
+import { ChakraProvider, Text, Box, Button } from '@chakra-ui/react'
 
 import ClientForm from './components/Form';
 import FetchFullSize from './components/FetchFullSize';
 import FetchThumbNail from './components/FetchThumbNail';
+
 
 const App = () => {
   
@@ -13,7 +14,7 @@ const App = () => {
          Motorway UI Test
       </Text>
       
-      <FetchFullSize />
+      {/* <FetchFullSize /> */}
       <FetchThumbNail />
       
       <Box mb='30px'>

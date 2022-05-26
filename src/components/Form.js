@@ -54,8 +54,11 @@ function ClientForm() {
     function validateColor(value) {
         let error;
         var s = new Option().style;
+        
         if (value) {
           s.color = value.toLowerCase();
+          console.log(s.color)
+          console.log(value.toLowerCase())
         }
         if (!value) {
           error = 'Favourite Color is required';
@@ -111,7 +114,7 @@ function ClientForm() {
               {({ field, form }) => (
                 <FormControl isInvalid={form.errors.color && form.touched.color}>
                   <FormLabel htmlFor='color'>Favourite Color</FormLabel>
-                  <Input {...field} id='color' placeholder='Favourite Color' />
+                  <Input {...field} type='color' id='color' placeholder='Favourite Color' />
                   <FormErrorMessage>{form.errors.color}</FormErrorMessage>
                 </FormControl>
               )}
